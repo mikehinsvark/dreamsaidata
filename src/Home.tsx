@@ -17,6 +17,7 @@ const DATA_SUPPLY_VIDEO = "https://datasupply.ai/media/datasupply-vsl.mp4?v=your
 const VIDEO_POSTER = "/media/video-cover.png";
 const HERO_ARTWORK = "/media/hero.png";
 const LICENSING_INFOGRAPHIC = "/media/data-licensing.webp";
+const PARTNER_INTRODUCTION = "/media/partner-introduction.png";
 
 function JoinNetworkLink({ className, iconSize = 18 }: { className: string; iconSize?: number }) {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null);
   const heroImageDialogRef = useRef<HTMLDialogElement>(null);
   const infographicDialogRef = useRef<HTMLDialogElement>(null);
+  const partnerImageDialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const panels = pageRef.current?.querySelectorAll<HTMLElement>(".glow-card");
@@ -167,6 +169,17 @@ export default function Home() {
             </article>
           </div>
           <p className="data-safety-note"><LockKeyhole size={15} aria-hidden="true" /> Start with a high-level conversation. Any data sharing requires separate review and your approval.</p>
+        </section>
+
+        <section className="partner-story-section" id="partner-introduction" aria-label="Business partner introduction">
+          <button className="partner-story-frame glow-card" type="button" aria-label="View the business partner introduction image fullscreen" onClick={() => partnerImageDialogRef.current?.showModal()}>
+            <img src={PARTNER_INTRODUCTION} alt="Dreams AI Data for business partners: Open the door. We do the rest. Introduce business owners to Dreams AI Data to explore business knowledge, buyer interest, and AI-ready data opportunities while you stay focused on the relationship. Glowing blue and gold data layers illustrate the opportunity." width="1774" height="887" loading="lazy" decoding="async" />
+            <span className="hero-expand-hint" aria-hidden="true"><Expand size={16} /></span>
+          </button>
+          <dialog className="hero-image-dialog" ref={partnerImageDialogRef} aria-label="Fullscreen business partner introduction" onClick={event => { if (event.target === event.currentTarget) event.currentTarget.close(); }}>
+            <button className="hero-image-close" type="button" aria-label="Close fullscreen partner image" onClick={() => partnerImageDialogRef.current?.close()}><X size={24} /></button>
+            <img src={PARTNER_INTRODUCTION} alt="Open the door. We do the rest. Introduce business owners to Dreams AI Data; we help uncover valuable business knowledge, buyer interest, and AI-ready data opportunities while you stay focused on the relationship." width="1774" height="887" />
+          </dialog>
         </section>
 
         <section className="process-section" id="how-it-works" aria-labelledby="process-title">

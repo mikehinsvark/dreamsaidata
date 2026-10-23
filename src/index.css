@@ -371,3 +371,10 @@ h1 em { color: #2255ca; }
 .join-destination { margin: 0; color: #496685; font-size: 11px; line-height: 1.5; text-align: center; }
 .join-actions .button-gold:focus-visible { outline-color: #173e6a; }
 @media (max-width: 540px) { .join-network-button { min-height: 56px; padding: 13px 18px; font-size: 16px; } }
+
+/* Supplied partner image between opportunity context and the first-step section. */
+.partner-story-section { width: calc(100% - 64px); max-width: 1040px; margin: 0 auto 30px; }
+.partner-story-frame { display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid #5287ba; border-radius: 10px; background: #031426; line-height: 0; }
+.partner-story-frame > img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: contain; }
+@media (max-width: 1040px) { .partner-story-section { width: calc(100% - 44px); } }
+@media (max-width: 540px) { .partner-story-section { width: calc(100% - 32px); margin-bottom: 25px; } }

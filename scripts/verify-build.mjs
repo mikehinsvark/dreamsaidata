@@ -12,6 +12,9 @@ for (const match of html.matchAll(/(?:src|href|poster)="(\/[^"?#]+)"/g)) {
 }
 assert.equal(readFileSync("docs/CNAME", "utf8").trim(), "dreamsaidata.com");
 assert(existsSync("docs/.nojekyll"));
+assert(existsSync("docs/media/partner-introduction.png"), "Supplied partner image must be published locally");
+assert(html.indexOf('id="opportunity"') < html.indexOf('id="partner-introduction"'), "Partner image must follow What May Matter");
+assert(html.indexOf('id="partner-introduction"') < html.indexOf('id="how-it-works"'), "Partner image must precede A Simple First Step");
 assert(html.indexOf('id="how-it-works"') < html.indexOf('id="licensing-overview"'));
 assert(html.indexOf('id="licensing-overview"') < html.indexOf('id="questions"'));
 console.log("Static export checks passed: four signup links, no local form, complete HTML, local media, and custom domain.");
