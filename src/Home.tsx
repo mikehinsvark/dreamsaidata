@@ -12,7 +12,7 @@ import {
   X,
 } from "lucide-react";
 
-const JOIN_NETWORK_URL = "https://datasupply.ai/w/p/lJnXLDNE";
+const JOIN_NETWORK_URL = "https://datasupply.ai/w/p/y9eT8nN-";
 const DATA_SUPPLY_VIDEO = "https://datasupply.ai/media/datasupply-vsl.mp4?v=your-data-vsl";
 const VIDEO_POSTER = "/media/video-cover.png";
 const HERO_ARTWORK = "/media/hero.png";

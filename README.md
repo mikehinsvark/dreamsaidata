@@ -12,6 +12,6 @@ Install Node.js 22 or later and pnpm 10.18.0. Run `pnpm install --frozen-lockfil
 
 Repository Settings → Pages must use **Deploy from a branch**, branch **main**, folder **/docs**, and custom domain **dreamsaidata.com**. Enable **Enforce HTTPS** once GitHub has issued the domain certificate. `public/CNAME` and `.nojekyll` are copied into the published folder during the build.
 
-The hero, video cover, infographic, and favicon are stored in `public/` and served by GitHub Pages. Video playback remains embedded using DataSupply’s hosted MP4. Every “Join the network” button points to `https://datasupply.ai/w/p/lJnXLDNE` and opens in a new tab.
+The hero, video cover, infographic, and favicon are stored in `public/` and served by GitHub Pages. Video playback remains embedded using DataSupply’s hosted MP4. Every “Join the network” button points to `https://datasupply.ai/w/p/y9eT8nN-` and opens in a new tab.
 
 This site has no local signup fields, API server, database, login, or dependency on Manus hosting. No historical contact submissions, credentials, or server configuration are included in this repository.

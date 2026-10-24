@@ -4,7 +4,8 @@ import assert from "node:assert/strict";
 const html = readFileSync("docs/index.html", "utf8");
 assert(!html.includes("<!--app-html-->"), "Landing page must be prerendered");
 assert(html.includes("Business knowledge."), "Meaningful initial HTML is required");
-assert.equal((html.match(/href="https:\/\/datasupply\.ai\/w\/p\/lJnXLDNE"/g) || []).length, 4, "All four join CTAs must use the exact destination");
+assert.equal((html.match(/href="https:\/\/datasupply\.ai\/w\/p\/y9eT8nN-"/g) || []).length, 4, "All four join CTAs must use the exact destination, including the trailing hyphen");
+assert(!html.includes("https://datasupply.ai/w/p/lJnXLDNE"), "Previous signup destination must not remain on the page");
 assert(!/<(?:form|input|textarea|select)\b/.test(html), "No contact form may be included");
 assert(!/manus-storage|\/api\/|manus\.computer/.test(html), "No Manus runtime dependency may be shipped");
 for (const match of html.matchAll(/(?:src|href|poster)="(\/[^"?#]+)"/g)) {
